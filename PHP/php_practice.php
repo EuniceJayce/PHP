@@ -361,21 +361,80 @@
     // echo $y, "<br>";
 
 
+    // $gender = "female";
+    // $x = $gender == "male" ? "Mr." : "Ms.";
+
+    // echo $gender == "male" ? "Mr." : "Ms.";
+
+    // $color = "R" ??  "Red";
+    // $color = null ??  "Red";
+    // $color = null ??  null;
+    
+    // echo $color;
 
 
 
 
+    // $students = array(
+    //     array("name" => "Mary", "gender" => "Female", "age" => 16),
+    //     array("name" => "Ray", "gender" => "Male", "age" => 17),
+    //     array("name" => "Hardy", "gender" => "Male", "age" => 20),
+
+    // );
+    // foreach ($students as $student){
+    //     echo "<h1>Name: " .$student["name"]. "<h1>";
+    //     echo "<ul>";
+    //         echo "<li>".$student["gender"]. "</li>";
+    //         echo "<li>".$student["age"]. "</li>";
+
+
+    //     echo "</ul>";
+
+    // }
+
+    // ?>
+
+    <?php foreach ($students as $student){ ?>
+        <h1><?php echo $student['name']; ?></h1>
+        <ul>
+            <li><?php echo $student['gender']; ?></li>
+            <li><?php echo $student['age']; ?></li>
+        </ul>
+    <?php } ?>
+    
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+        </tr>
+        <?php foreach ($students as $student){ ?>
+            <tr>
+                <td><?php echo $student['name']; ?></td>
+                <td><?php echo $student['gender']; ?></td>
+                <td><?php echo $student['age']; ?></td>
+            </tr>
+        <?php } ?>
+    </table>
 
 
 
+     <table>
+        <tr> 
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+        </tr>
+        <?php foreach ($students as $student){ ?>
+            <?php foreach ($student as $value){ ?>
+                <tr>
+                    <td><?php echo $value; ?></td>
+                </tr>
+            <?php } ?>
+        <?php } ?>
+    </table>
 
-
-
-
-
-
-
-    ?>
 
 
 
